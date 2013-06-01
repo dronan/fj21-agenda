@@ -9,9 +9,11 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
 
 import br.com.caelum.jdbc.ConnectionFactory;
 
+@WebFilter(filterName="FiltroConexao", value="/*")
 public class FiltroConexao implements Filter {
 
 	@Override
